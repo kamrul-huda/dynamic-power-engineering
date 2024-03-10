@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>DPE demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,16 +20,6 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <style>
-        .inter-font {
-            font-family: "Inter", sans-serif;
-        }
-
-        .lato-font {
-            font-family: "Lato", sans-serif;
-        }
-    </style>
-
     <script>
         tailwind.config = {
             theme: {
@@ -45,54 +35,13 @@
         }
     </script>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Demo styles -->
-    <style>
-        .mySwiper-1 {
-            width: 100%;
-            height: 70vh;
-        }
-
-        .swiper-slide-1 {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide-1 img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .mySwiper-2 {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .swiper-slide-2 {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 300px;
-        }
-
-        .swiper-slide-2 img {
-            display: block;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+  
 </head>
 
 <body>
     <!-- navbar -->
-    <section class="bg-black lato-font ">
+    <section class="bg-black lato-font sticky top-0 z-50">
         <div class="container mx-auto  lg:px-20 px-1">
             <div class="navbar flex justify-between">
                 <div class="flex w-1/3">
@@ -116,7 +65,7 @@
                                 <li><a><i class="fa-solid fa-flag" style="color: #000000;"></i></i></i>Report</a></li>
                             </ul>
                         </div>
-                        <div class="dropdown dropdown-end lg:flex space-x-6">
+                        <div class="dropdown dropdown-end hidden lg:flex space-x-6">
                             <ul tabindex="0" class="flex space-x-8 font-bold text-base-color-gray">
                                 <li><a href=""
                                         class="tracking-wider text-base-color-orange hover:text-base-color-orange hover:border-2 hover:rounded-lg hover:border-x-0 hover:border-b-8 hover:border-t-0 hover:border-base-color-blue py-1">HOME</a>
@@ -149,9 +98,43 @@
     <section>
         <div class="swiper mySwiper mySwiper-1">
             <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide-1"><img src="images/01.jpg" alt=""></div>
-                <div class="swiper-slide swiper-slide-1"><img src="images/1.png" alt=""></div>
-                <div class="swiper-slide swiper-slide-1"><img src="images/02.jpg" alt=""></div>
+                <div class="swiper-slide swiper-slide-1 relative">
+                    <div class="absolute w-1/3 space-y-2 bg-slate-600 p-6 rounded-lg bg-opacity-70">
+                        <h1 class="font-semibold  text-white text-2xl  lato-font">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi assumenda iusto ab eum
+                            ducimus quas exercitationem autem quos illo libero.
+                        </h1>
+                        <button
+                            class="bg-base-color-orange text-lg text-[#FFF]  py-4 px-6 rounded-lg  font-bold  hover:scale-[100.8%] duration-300 ease-in-out">Learn
+                            More</button>
+                    </div>
+
+                    <img src="./images/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide swiper-slide-1">
+                    <div class="absolute w-1/3 space-y-2 bg-slate-600 p-6 rounded-lg bg-opacity-70">
+                        <h1 class="font-semibold  text-white text-2xl lato-font">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi assumenda iusto ab eum
+                            ducimus quas exercitationem autem quos illo libero.
+                        </h1>
+                        <button
+                            class="bg-base-color-orange text-lg text-[#FFF]  py-4 px-6 rounded-lg  font-bold  hover:scale-[100.8%] duration-300 ease-in-out">Learn
+                            More</button>
+                    </div>
+                    <img src="./images/1.png" alt="">
+                </div>
+                <div class="swiper-slide swiper-slide-1">
+                    <div class="absolute w-1/3 space-y-2 bg-red-600 p-6 rounded-lg bg-opacity-80">
+                        <h1 class="font-semibold  text-white text-2xl  lato-font">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi assumenda iusto ab eum
+                            ducimus quas exercitationem autem quos illo libero.
+                        </h1>
+                        <button
+                            class="bg-base-color-orange text-lg text-[#FFF]  py-4 px-6 rounded-lg  font-bold  hover:scale-[100.8%] duration-300 ease-in-out">Learn
+                            More</button>
+                    </div>
+                    <img src="./images/02.jpg" alt="">
+                </div>
             </div>
             <div class="swiper-button-next text-base-color-orange"></div>
             <div class="swiper-button-prev text-base-color-orange"></div>
@@ -165,7 +148,8 @@
     </div>
     <section class="container mx-auto">
         <div class="flex justify-between items-center lato-font gap-20">
-            <p  class="w-1/2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem, perferendis aliquid et
+            <p class="w-1/2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem, perferendis
+                aliquid et
                 aspernatur similique vel exercitationem dignissimos rerum, reprehenderit laudantium atque quidem
                 accusantium voluptatibus quos earum unde esse rem!
                 <br>
@@ -180,7 +164,7 @@
                 perferendis aliquid veritatis odio!
             </p>
             <div class="w-1/2">
-                <img  class="w-3/4 mx-auto" src="https://swiperjs.com/demos/images/nature-4.jpg" alt="">
+                <img class="w-3/4 mx-auto" src="https://swiperjs.com/demos/./images/nature-4.jpg" alt="">
             </div>
         </div>
     </section>
@@ -189,96 +173,421 @@
         <hr class="border-2 border-orange-400 w-1/4">
         <h1 class="flex-1 font-black text-3xl pl-8 tracking-wider lato-font">OUR PRODUCTS</h1>
     </div>
-    <section class=" bg-gray-400">
-        <div class="swiper mySwiper mySwiper-2 container">
-            <div class="swiper-wrapper  *:relative *:flex *:items-center *:justify-center *:m-3 *:overflow-hidden *:shadow-xl *:w-72 *:h-72 *:hover:*:scale-125">
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover" src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                
+    <section class="relative">
+        <div class=" bg-no-repeat bg-cover bg-center" id="swiperbg">
+            <div class="swiper mySwiper mySwiper-2 container">
+                <div
+                    class="swiper-wrapper  *:relative *:flex *:items-center *:justify-center *:m-3 *:overflow-hidden *:shadow-xl *:w-72 *:h-72 *:hover:*:scale-125">
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-1.jpg" />
+ 
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2 lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+                        <div
+                            class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">
+                            Title-1</div>
+                        <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"
+                            src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
                 </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2 lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium  py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </div>
-                <div class="swiper-slide swiper-slide-2">
-                    <div class="z-50 bg-slate-900 bg-opacity-40 w-full text-center text-white font-medium py-2  lato-font">Title-1</div>
-                    <img class="absolute w-full h-full transition-all duration-500 ease-in-out transform object-center object-cover"  src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 h-full w-full bg-slate-400 bg-opacity-50"></div>
+    </section>  
+    <!-- services -->
+    <section class="my-20 bg-orange-50 py-20 ">
+        <div class="container flex justify-between items-center mx-auto lato-font  gap-10">
+            <div class="flex justify-between gap-4">
+                <div><i class="fa-regular fa-star text-base-color-orange font-bold text-3xl"></i></div>
+                <div class="flex-1  space-y-4">
+                    <h2 class="font-extrabold text-xl  text-gray-700 inter-font">24/7 SERVICE</h2>
+                    <p class="text-gray-600">The one-stop call center 09613737777 has a solution for emergency,
+                        complaints exploration, installation, pay ladder, use, maintenance and other services.</p>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="flex justify-between gap-4">
+                <div><i class="fa-regular fa-star text-base-color-orange font-bold text-3xl"></i></div>
+                <div class="flex-1  space-y-4">
+                    <h2 class="font-extrabold text-xl  text-gray-700 inter-font">TECHNICAL SUPPORT AND TRAINING</h2>
+                    <p class="text-gray-600">The one-stop call center 09613737777 has a solution for emergency,
+                        complaints exploration, installation, pay ladder, use, maintenance and other services.</p>
+                </div>
+            </div>
+            <div class="flex justify-between gap-4">
+                <div><i class="fa-regular fa-star text-base-color-orange font-bold text-3xl"></i></div>
+                <div class="flex-1  space-y-4">
+                    <h2 class="font-extrabold text-xl text-gray-700 inter-font">CONTINUED ROUTINE MAINTENANCE</h2>
+                    <p class="text-gray-600">The one-stop call center 09613737777 has a solution for emergency,
+                        complaints exploration, installation, pay ladder, use, maintenance and other services.</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Major Projects -->
+    <div class="flex items-center my-10">
+        <hr class="border-2 border-orange-400 w-1/4">
+        <h1 class="flex-1 font-black text-3xl pl-8 tracking-wider lato-font">OUR MAJOR PROJECTS</h1>
+    </div>
+    <section class="container mx-auto">
+        <div class="grid grid-rows-2 grid-flow-col gap-4 lato-font  place-items-center">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-1</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-1.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-1</p>
+                            <img class="w-full h-full opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-1.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-2</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-2.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-2</p>
+                            <img class="w-full h-full opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-2.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-3</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-3.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold  z-20">
+                                Title-3</p>
+                            <img class="w-full h-full opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-3.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-4</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-4.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-4</p>
+                            <img class="w-full h-full  opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-4.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-5</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-5.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-5</p>
+                            <img class="w-full h-full opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-5.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-6</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-6.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-6</p>
+                            <img class="w-full h-full  opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-6.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-7</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-7.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-7</p>
+                            <img class="w-full h-full opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-7.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold">
+                                Title-8</p>
+                            <img class="w-full h-full" src="https://swiperjs.com/demos/./images/nature-8.jpg" />
+                        </div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="w-full h-full relative">
+                            <p
+                                class="w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-slate-400 bg-opacity-50 text-white py-2 font-semibold z-20">
+                                Title-8</p>
+                            <img class="w-full h-full opacity-80"
+                                src="https://swiperjs.com/demos/./images/nature-8.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="flex items-center my-10">
+        <hr class="border-2 border-orange-400 w-1/4">
+        <h1 class="flex-1 font-black text-3xl pl-8 tracking-wider lato-font">OUR CLIENTS</h1>
+    </div>
+
+
+    <section class="container mx-auto m-10 ">
+        <div class="swiper swiper-3 mySwiper mySwiper-3 border  py-6 px-2 border-l-0 border-r-0 ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-1.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-2.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-3.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-4.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-5.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-6.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-7.jpg" /> </div>
+                <div class="swiper-slide  swiper-slide-3"><img class="w-full h-full"
+                        src="https://swiperjs.com/demos/./images/nature-8.jpg" /> </div>
+
+            </div>
+            <div class="swiper-button-next text-base-color-orange "></div>
+            <div class="swiper-button-prev text-base-color-orange"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+
+    </section>
+
+    <div class="flex items-center my-10">
+        <hr class="border-2 border-orange-400 w-1/4">
+        <h1 class="flex-1 font-black text-3xl pl-8 tracking-wider lato-font">REQUEST A QUOTE</h1>
+    </div>
+    <div class="w-full h-full relative">
+        <img src="./images/landmarks-modern-city.jpg" class="parallax-img w-full h-[80vh] object-cover" alt="">
+        <div class="absolute top-0 right-0 w-1/3 h-full">
+           <div class="h-full flex-1 flex justify-center items-center">
+            <form class="flex justify-end items-center lato-font flex-1 p-10">
+                <div class="w-full space-y-5 ">
+                    <div class="form-control ">
+                        <input type="text" placeholder="Enter your full name"
+                            class="input input-bordered bg-[#F3F3F3] placeholder:text-black border-none focus:outline-none opacity-80"
+                            required />
+                    </div>
+                    <div class="form-control ">
+                        <input type="email" placeholder="Enter your email"
+                            class="input input-bordered bg-[#F3F3F3]  placeholder:text-black  border-none focus:outline-none  opacity-80"
+                            required />
+                    </div>
+                    <div class="form-control">
+                        <input type="text" placeholder="Enter your phone number"
+                            class="input input-bordered bg-[#F3F3F3]  placeholder:text-black  border-none focus:outline-none  opacity-80"
+                            required />
+                    </div>
+                    <div class="form-control">
+                        <textarea
+                            class="textarea textarea-bordered h-80 placeholder:text-black bg-[#F3F3F3] text-base  text-black  border-none focus:outline-none  opacity-80"
+                            placeholder="Write your message"></textarea>
+                    </div>
+                    <div class="form-control">
+                        <button
+                            class="bg-base-color-orange text-lg text-[#FFF]  py-4 px-6 rounded-lg  font-bold  hover:scale-[100.8%] duration-300 ease-in-out">Send
+                            Message
+                        </button>
+                    </div>
+                </div>
+            </form>
+           </div>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer p-20 bg-black text-white flex flex-col lato-font">
+
+        <div class="container mx-auto flex justify-between h-40">
+            <nav class="flex flex-col gap-2 border-2 border-gray-500 p-2 border-t-0 border-r-0 border-b-0 h-full">
+                <h6 class="footer-title">PRODUCTS & SERVICES</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav class="flex flex-col gap-2 border-2 border-gray-500 p-2 border-t-0 border-r-0 border-b-0 min-h-full">
+                <h6 class="footer-title">TOOLS & RESOURCES</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+            <nav class="flex flex-col gap-2 border-2 border-gray-500 p-2 border-t-0 border-r-0 border-b-0 h-full">
+                <h6 class="footer-title">OUR COMPANY</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+
+            <nav class="flex flex-col gap-2 border-2 border-gray-500 p-2 border-t-0 border-r-0 border-b-0  h-full">
+                <h6 class="footer-title">QUICK LINKS</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </div>
+
+        <div class="container mx-auto w-full flex flex-col items-center">
+            <div class="flex items-center gap-6">
+                <span><a href=""><i class="fa-brands fa-twitter text-2xl"></i></a></i></span>
+                <span><a href=""><i class="fa-brands fa-facebook-f  text-2xl"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-instagram  text-2xl"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-linkedin text-2xl"></i></a></span>
+            </div>
+            <hr class="footer-line border w-full border-gray-500">
+            <div class="reserved">2024, All Rights Reserved.</div>
+        </div>
+    </footer>
+
 
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- parallax JS -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
     <!-- Initialize Swiper -->
-    <script>
-        var swiper_2 = new Swiper(".mySwiper-2", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            }
-        });
-
-
-        var swiper = new Swiper(".mySwiper-1", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+   <script src="./app.js"></script>
 </body>
 
 </html>

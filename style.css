@@ -1,0 +1,110 @@
+.inter-font {
+    font-family: "Inter", sans-serif;
+}
+
+.lato-font {
+    font-family: "Lato", sans-serif;
+}
+
+.mySwiper-1 {
+    width: 100%;
+    height: 70vh;
+}
+
+.swiper-slide-1 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide-1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper-2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide-2 {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide-2 img {
+    display: block;
+    width: 100%;
+}
+
+
+/* flip box */
+.flip-box {
+    background-color: transparent;
+    width: 370px;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateX(180deg);
+}
+
+.swiper-3 {
+    width: auto;
+    height: 20vh;
+}
+
+.swiper-slide-3 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide-3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
